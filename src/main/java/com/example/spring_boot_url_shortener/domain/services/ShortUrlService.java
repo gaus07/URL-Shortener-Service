@@ -3,9 +3,14 @@ package com.example.spring_boot_url_shortener.domain.services;
 import com.example.spring_boot_url_shortener.ApplicationProperties;
 import com.example.spring_boot_url_shortener.domain.entities.ShortUrl;
 import com.example.spring_boot_url_shortener.domain.models.CreateShortUrlCmd;
+import com.example.spring_boot_url_shortener.domain.models.PagedResult;
 import com.example.spring_boot_url_shortener.domain.models.ShortUrlDto;
 import com.example.spring_boot_url_shortener.domain.repositories.ShortUrlRepository;
 import com.example.spring_boot_url_shortener.domain.repositories.UserRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -32,9 +37,12 @@ public class ShortUrlService {
 
     }
 
-    public List<ShortUrlDto> findAllPublicShortUrls() {
-        return shortUrlRepository.findPublicShortUrls()
-                .stream().map(entityMapper::toShortUrlDto).toList();
+    public PagedResult<ShortUrlDto> findAllPublicShortUrls(int pageNo, int pageSize) {
+        pageNo = pageNo > 1 ? pageNo - 1 : 0;
+        Pageable pageable = PageRequest.of(pageNo, pageSize, Sort.by(Sort.Direction.DESC, "createdAt"));
+        Page<ShortUrlDto> shortUrlDtoPage = shortUrlRepository.findPublicShortUrls(pageable)
+                .map(entityMapper::toShortUrlDto);
+        return PagedResult.from(shortUrlDtoPage);
     }
 
     @Transactional

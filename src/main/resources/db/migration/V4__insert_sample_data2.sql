@@ -1,0 +1,35 @@
+INSERT INTO short_urls
+    (short_key, original_url, created_by, created_at, expires_at, is_private, click_count)
+VALUES
+    ('a7Kx21', 'https://spring.io/guides', 1, TIMESTAMP '2024-09-01', NULL, FALSE, 12),
+    ('b9Lm42', 'https://spring.io/projects/spring-boot', 1, TIMESTAMP '2024-09-02', NULL, FALSE, 24),
+    ('c3Np58', 'https://docs.spring.io/spring-boot/index.html', 1, TIMESTAMP '2024-09-03', NULL, FALSE, 37),
+    ('d8Qr63', 'https://start.spring.io/', 1, TIMESTAMP '2024-09-04', NULL, FALSE, 18),
+    ('e5Ts79', 'https://www.postgresql.org/docs/', 1, TIMESTAMP '2024-09-05', NULL, FALSE, 45),
+    ('f2Uv84', 'https://www.docker.com/', 1, TIMESTAMP '2024-09-06', NULL, TRUE, 9),
+    ('g6Wx15', 'https://docs.docker.com/', 1, TIMESTAMP '2024-09-07', NULL, FALSE, 51),
+    ('h4Yz27', 'https://github.com/', 1, TIMESTAMP '2024-09-08', NULL, FALSE, 63),
+    ('j8Ab39', 'https://git-scm.com/doc', 1, TIMESTAMP '2024-09-09', NULL, FALSE, 28),
+    ('k1Cd46', 'https://maven.apache.org/guides/', 1, TIMESTAMP '2024-09-10', NULL, FALSE, 17),
+
+    ('m5Ef52', 'https://www.thymeleaf.org/', 1, TIMESTAMP '2024-09-11', NULL, FALSE, 31),
+    ('n7Gh68', 'https://docs.spring.io/spring-framework/reference/', 1, TIMESTAMP '2024-09-12', NULL, TRUE, 14),
+    ('p2Ij73', 'https://hibernate.org/orm/', 1, TIMESTAMP '2024-09-13', NULL, FALSE, 42),
+    ('q9Kl81', 'https://jakarta.ee/specifications/persistence/', 1, TIMESTAMP '2024-09-14', NULL, FALSE, 22),
+    ('r4Mn26', 'https://www.baeldung.com/spring-boot', 1, TIMESTAMP '2024-09-15', NULL, FALSE, 76),
+    ('s6Op34', 'https://www.baeldung.com/spring-data-jpa', 1, TIMESTAMP '2024-09-16', NULL, FALSE, 54),
+    ('t3Qr57', 'https://www.baeldung.com/spring-security', 1, TIMESTAMP '2024-09-17', NULL, TRUE, 19),
+    ('u8St62', 'https://www.postgresql.org/', 1, TIMESTAMP '2024-09-18', NULL, FALSE, 47),
+    ('v5Uv71', 'https://jdbc.postgresql.org/', 1, TIMESTAMP '2024-09-19', NULL, FALSE, 16),
+    ('w7Wx83', 'https://flywaydb.org/', 1, TIMESTAMP '2024-09-20', NULL, FALSE, 39),
+
+    ('x2Yz14', 'https://documentation.red-gate.com/fd', 1, TIMESTAMP '2024-09-21', NULL, FALSE, 27),
+    ('y9Ab25', 'https://mvnrepository.com/', 1, TIMESTAMP '2024-09-22', NULL, FALSE, 88),
+    ('z4Cd36', 'https://www.jetbrains.com/idea/', 1, TIMESTAMP '2024-09-23', NULL, TRUE, 33),
+    ('A8Ef47', 'https://dev.java/learn/', 1, TIMESTAMP '2024-09-24', NULL, FALSE, 61),
+    ('B3Gh58', 'https://docs.oracle.com/en/java/', 1, TIMESTAMP '2024-09-25', NULL, FALSE, 44),
+    ('C7Ij69', 'https://www.baeldung.com/java', 1, TIMESTAMP '2024-09-26', NULL, FALSE, 73),
+    ('D5Kl72', 'https://developer.mozilla.org/en-US/docs/Web/HTTP', 1, TIMESTAMP '2024-09-27', NULL, FALSE, 29),
+    ('E1Mn85', 'https://developer.mozilla.org/en-US/docs/Learn', 1, TIMESTAMP '2024-09-28', NULL, TRUE, 11),
+    ('F6Op93', 'https://stackoverflow.com/questions/tagged/spring-boot', 1, TIMESTAMP '2024-09-29', NULL, FALSE, 95),
+    ('G4Qr17', 'https://roadmap.sh/spring-boot', 1, TIMESTAMP '2024-09-30', NULL, FALSE, 36);
